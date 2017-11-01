@@ -20,7 +20,7 @@ export default {
  .header {
 		position: relative;
 		height: .88rem;
-		background: #00bcd4;
+		background:/* #00bcd4*/#FF0000;
 	}
 	.header-left {
 		float: left;
