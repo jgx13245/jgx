@@ -5,7 +5,6 @@
     <swiper-slide>
     		<div class="swiper-img-con">
 					<ul class="first">
-						<a></a>
 						<li><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt="景点门票" style="opacity: 1;">	<span>景点门票</span></li>
 						<li><img src="http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png" alt="动植物园" style="opacity: 1;"><span>动植物园</span></li>
 						<li><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt="故宫" style="opacity: 1;"><span>故宫</span></li>
