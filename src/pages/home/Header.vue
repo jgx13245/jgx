@@ -22,6 +22,7 @@ export default {
  .header {
 		height: .88rem;
 		background:/* #00bcd4*/#FF0000;
+		overflow: hidden;
 	}
 	.header-left {
 		float: left;
