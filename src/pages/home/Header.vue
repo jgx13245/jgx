@@ -1,5 +1,6 @@
 <template>
  	<header class="header">
+ 		<a></a>
  		<div class="header-left iconfont icon-fanhui"></div>
  		<div class="header-title">
  			输入城市/景点/游玩主题
@@ -21,8 +22,13 @@ export default {
 <style>
  .header {
 		height: .88rem;
+
 		background:/* #00bcd4*/#FF0000;
 		overflow: hidden;
+
+		background: #00bcd4;
+		overflow:hidden;
+
 	}
 	.header-left {
 		float: left;
@@ -51,6 +57,7 @@ export default {
 		color: #fff;
 	}
 	.header-city-wrapper {
+
 		position: relative;
 		padding-right: .3rem;
 	}

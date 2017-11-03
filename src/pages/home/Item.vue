@@ -65,7 +65,6 @@
 	.item1-img{
 		width: 100%;
 		height:  1.4rem;
-		border-bottom: 12px solid #f5f5f5;
 	}
 	.dl1{
 		width: 50%;
