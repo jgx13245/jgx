@@ -1,5 +1,5 @@
 <template>
- 	<list class="list">
+ 	<div class="list">
  		<h2 class="modList">热销推荐</h2>
  		<dl>
  			<dt>
@@ -7,7 +7,7 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<dl>
  			<dt>
@@ -15,7 +15,7 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<dl>
  			<dt>
@@ -23,7 +23,7 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<dl>
  			<dt>
@@ -31,7 +31,7 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<dl>
  			<dt>
@@ -39,7 +39,7 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<dl>
  			<dt>
@@ -47,12 +47,12 @@
  			</dt>
  			<dd>故宫</dd>
  			<dd>东方故宫建筑代表，东方故宫建筑东方故宫建筑</dd>
- 			<dd><span>￥45</span>起</dd>
+ 			<dd><i>￥</i><span>45</span> 起</dd>
  		</dl>
  		<div class="botList">
  			<a>查看所有产品</a>
  		</div>
- 	</list>
+ 	</div>
 </template>
 
 <script>
@@ -82,12 +82,16 @@ export default {
 	overflow: hidden;
 	height: .4rem;
 	line-height: .4rem;
-	width: 4.08rem;
+	width: 70%;
 	color: #9e9e9e;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 .list dd span{
+	color: #ff8300;
+	font-size: .4rem;
+}
+.list dd i{
 	color: #ff8300;
 }
 .list dt{
