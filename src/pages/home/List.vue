@@ -1,5 +1,5 @@
 <template>
- 	<list class="list">
+ 	<div class="list">
  		<h2 class="modList">热销推荐</h2>
  		<dl>
  			<dt>
@@ -52,7 +52,7 @@
  		<div class="botList">
  			<a>查看所有产品</a>
  		</div>
- 	</list>
+ 	</div>
 </template>
 
 <script>
