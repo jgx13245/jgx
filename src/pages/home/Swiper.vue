@@ -89,11 +89,6 @@
 					width:0.7rem;
 					height:0.7rem;
 				}
-
-
-
-
-
 				.second{
 					box-sizing:border-box;
 				}
