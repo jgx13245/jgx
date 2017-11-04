@@ -2,8 +2,7 @@
 	<div>
 		<div class="item">
 			<div class="item-list">				
-				<span class="item-span iconfont icon-select">全部分类</span>
-
+				<span class="item-span iconfont icon-select ">全部分类</span>
 			</div>
 			<div class="item-list">				
 				<span class="item-span iconfont icon-select">推荐排序</span>				
@@ -14,7 +13,7 @@
 
 <script>
 export default {			
-	
+
 }
 </script>
 
@@ -64,5 +63,5 @@ export default {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
-
+	
 </style>

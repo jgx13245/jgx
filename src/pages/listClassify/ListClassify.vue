@@ -11,7 +11,8 @@ import ListComponent from "./Header";
 import ListFilter from "./Filter";
 import SightComponent from "./Sight";
 
-export default {			
+export default {
+		
 	components: {
 				"list-header": ListComponent,
 				"list-filter":ListFilter,
