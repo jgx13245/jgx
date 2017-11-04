@@ -53,13 +53,12 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.week-list{
+	/*.week-list{
 		width: 100%;
-		height: 4.4rem;
-	}
+		height: 4.08rem;
+	}*/
 	.week-img{
 		width: 100%;
-		height: 3.13rem;
 	}
 	.week-headline{
 		font-size: .28rem;
@@ -68,7 +67,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		padding-left: .25rem;
-		padding-top: .2rem;
+		padding-top: .14rem;
 	}
 	.week-describe{
 		font-size: .24rem;
@@ -78,5 +77,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		padding-left: .25rem;
+		padding-bottom: .15rem;
 	}
 </style>

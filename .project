@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>jgx</name>
+	<name>team</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,15 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<id>1509681812012</id>
-=======
-			<id>1509682515722</id>
->>>>>>> f44bd5499a36196b6ef75a58143e54dff97058c7
-=======
-			<id>1509683772596</id>
->>>>>>> e81cb692c5ff9ef145027d203c8f96cc03464411
+			<id>1509683685921</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
