@@ -1,20 +1,20 @@
 <template>
  	<header class="header">
+		 <router-link to="/">
  		<div class="header-left iconfont icon-fanhui"></div>
+		 </router-link>
 		 <div class="header-title">
- 			输入城市/景点/游玩主题
+ 			北京
  		 </div>
  		<div class="header-right">
  			<div class="header-city-wrapper">
-				 <router-link to="/listClassify">
- 					<span class="header-city">北京</span>
-				 </router-link>
+ 				<span class="header-city">搜索</span>
  			</div>
  		</div>
  	</header>
 </template>
 
-<script>
+<script >
 export default {
 	
 }
@@ -68,7 +68,6 @@ export default {
 		white-space: nowrap;
 		width: 1rem;
 		text-overflow: ellipsis;
-		color:#fff;
 	}
 	.header-city::after {
 		content: "\0020";
