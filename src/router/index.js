@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
-<<<<<<< HEAD
+
 import ListClassify from '@/pages/listClassify/ListClassify'
 
-=======
+
 import List from '@/pages/listHot/list-Home'
 import listCity from '@/pages/listHot/List-city'
->>>>>>> 405b4f2df0be25894a22dbaf432eda255f5a7de3
+
 Vue.use(Router)
 
 export default new Router({
@@ -17,11 +17,12 @@ export default new Router({
       name: 'home',
       component: Home
     },{
-<<<<<<< HEAD
+
       path:'/listClassify',
       name:'listClassify',
       component:ListClassify
-=======
+    },
+    {
       path:'/listHot',
       name:'listHot',
       component:List,
@@ -29,8 +30,11 @@ export default new Router({
         path:'a',
         component:listCity
       }]
->>>>>>> 405b4f2df0be25894a22dbaf432eda255f5a7de3
+
     }
+  
+  
+  
   ]
 })
 
