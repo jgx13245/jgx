@@ -13,7 +13,7 @@
 import HeaderComponent from "./Header";
 import ItemComponent from "./Item";
 import BannerComponent from "./Banner";
-import ListComponent from "./List";
+import ListComponent from "./list-content";
 import SwiperComponent from "./Swiper";
 import WeekComponent from "./Week";
 export default {			
