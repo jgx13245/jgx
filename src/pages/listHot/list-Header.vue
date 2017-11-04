@@ -1,16 +1,14 @@
 <template>
  	<header class="header">
-
+		 <router-link to="/">
  		<div class="header-left iconfont icon-fanhui"></div>
-		 <router-link to="/listHot">
-		 <div class="header-title" >
- 			输入城市/景点/游玩主题
- 		 </div>
 		 </router-link>
+		 <input class="header-title" placeholder="输入城市或景点" @focus="jujiaoClick" @blur="shijiaoClick">
+ 			
 	
  		<div class="header-right">
  			<div class="header-city-wrapper">
- 				<span class="header-city">北京</span>
+ 				<span class="header-city">搜索</span>
  			</div>
  		</div>
  	</header>
@@ -18,7 +16,14 @@
 
 <script>
 export default {
-	
+	methods:{
+		jujiaoClick:function(){
+			this.$router.push("/listHot/a")
+		},
+		shijiaoClick:function(){
+		// 	this.$router.push("/listHot")
+		}
+	}
 }
 </script>
 
@@ -42,19 +47,17 @@ export default {
 		color: #fff;
 	}
 	.header-title {
-		position: absolute;
-		left: .8rem;
-		right: 1.36rem;
-		top: .14rem;
-		line-height: .6rem;
-		background: #fff;
-		border-radius: .06rem;
-		text-indent: .2rem;
-		color: #ccc;
+		width:4.6rem;
+		height:0.6rem;
+		border-radius:0.1rem;
+		margin-top:0.15rem;
+		outline: none;
+		border: none;
+		text-indent: 0.2rem;
 	}
 	.header-right {
 		float: right;
-		width: 1.28rem;
+		width: 1.0rem;
 		line-height: .88rem;
 		text-align: center;
 		color: #fff;
@@ -71,7 +74,7 @@ export default {
 		width: 1rem;
 		text-overflow: ellipsis;
 	}
-	.header-city::after {
+	/* .header-city::after {
 		content: "\0020";
 		position: absolute;		
 		top: .4rem;
@@ -80,5 +83,5 @@ export default {
 		height: 0;
 		border: .1rem solid transparent;
 		border-top: .1rem solid #fff;
-	}
+	} */
 </style>
