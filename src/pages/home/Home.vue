@@ -24,8 +24,7 @@ export default {
 				"banner-content": BannerComponent,
 				"swiper-content": SwiperComponent,
 				"item-content":ItemComponent,
-				"week-module":WeekComponent
-
+				"week-module":WeekComponent,
 			}
 		}
 

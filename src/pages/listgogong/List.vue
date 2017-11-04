@@ -1,10 +1,23 @@
 <template>
-	<div>list</div>
+	<div class="background-color">
+		<gugong-Ggheader></gugong-Ggheader>
+ 	</div>
 </template>
 
 <script>
-	export default{
-	
-	}
+	import GgHeaderComponent from "./GgHeader";
+export default {			
+	components: {
+				"gugong-Ggheader": GgHeaderComponent,
+			}
+		}
+
 </script>
+
+
+<style>
+	.background-color{
+		background: #f3f3f3;
+	}
+</style>
 
