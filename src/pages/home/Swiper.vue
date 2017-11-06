@@ -14,7 +14,7 @@
 							<span>动植物园</span>
 						</li>
 						<li>
-							<router-link to="/listgogong"><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt="故宫" style="opacity: 1;"></router-link>
+							<img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt="故宫" style="opacity: 1;">
 							<span>故宫</span>
 						</li>
 						<li>

@@ -1,14 +1,23 @@
 <template>
-	<div class="background-color">
+	<div>
 		<gugong-Ggheader></gugong-Ggheader>
+		<ticket-content></ticket-content>
+		<comment-content></comment-content>
+		<view-content></view-content>
  	</div>
 </template>
 
 <script>
-	import GgHeaderComponent from "./GgHeader";
+import GgHeaderComponent from "./GgHeader";
+import TicketComponent from "./Ticket";
+import CommentComponent from "./Comment";
+import ViewComponent from "./View";
 export default {			
 	components: {
 				"gugong-Ggheader": GgHeaderComponent,
+				"ticket-content": TicketComponent,
+				"comment-content": CommentComponent,
+				"view-content": ViewComponent
 			}
 		}
 
@@ -16,8 +25,6 @@ export default {
 
 
 <style>
-	.background-color{
-		background: #f3f3f3;
-	}
+
 </style>
 
