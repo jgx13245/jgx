@@ -3,27 +3,29 @@
 		<div class="gugong-img">
 			<img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg"/>
 			<h3>故宫(AAAAA景区)</h3>
-			<span class="gugong-number iconfont icon-houtai-changfangxing">10</span>	
+			<span class="gugong-number iconfont icon-tupian">10</span>	
+			<router-link to="/home"><span class="go-back iconfont icon-fanhui"></span></router-link> 
 		</div>
 		<div class="gugong-intro">
 			<div class="gugong-site gugong-site-beijing">
-				<p class="size-describe iconfont icon-houtai-changfangxing">北京市东城区景山前街4号</p>
+				<p class="size-describe iconfont icon-hm-normal-local">北京市东城区景山前街4号</p>
 				<span class="size-F iconfont icon-zimuf"></span>
 			</div>
 			<div class="gugong-site">
-				<p class="size-describe iconfont icon-houtai-changfangxing">查看景点简介及开放时间</p>
+				<p class="size-describe iconfont icon-tupian">查看景点简介及开放时间</p>
 				<span class="size-F iconfont icon-zimuf"></span>
 			</div>
 			<div class="gugong-site">
 				<p class="size-describe">
-					<span class="size-comment-zimu">BBBBB</span>
+					<span class="size-comment-zimu iconfont icon-tubiao1gaoxiaoxiaohua"></span>
+					<span class="size-comment-zimu iconfont icon-wuxing"></span>
 					<span class="size-comment-grade">5.0分</span>
 					<span class="size-comment-number">147314评论</span>
 				</p>
 				<span class="size-F iconfont icon-zimuf"></span>
 			</div>
 			<div class="gugong-site site-warning">
-				<p class="size-describe iconfont icon-houtai-changfangxing">因重要活动需要，故宫博物馆11月8日（周三）临时关闭，给您带来的不便，敬请原谅。</p>
+				<p class="size-describe iconfont icon-laba">因重要活动需要，故宫博物馆11月8日（周三）临时关闭，给您带来的不便，敬请原谅。</p>
 				<span class="size-F iconfont icon-zimuf"></span>
 			</div>
 		</div>
@@ -33,8 +35,8 @@
 				<li class="ticket-details">
 					<div class="time-slot">
 						<p class="time-slot-p">【上午场】 故宫成人票凭身份证入园</p>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">可定明日</span>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">条件退</span>
+						<span class="details-tomorrow iconfont icon-yuding">可定明日</span>
+						<span class="details-tomorrow iconfont icon-icondingjinketui">条件退</span>
 					</div>
 					<div class="ticket-right">
 						<p>￥40</p>
@@ -44,8 +46,8 @@
 				<li class="ticket-details">
 					<div class="time-slot ">
 						<p class="time-slot-p">【上午场】 故宫成人票+故宫全景手绘地图</p>
-						<span class="details-tomorrow time-slot-color iconfont icon-houtai-changfangxing">可定明日</span>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">不可退</span>
+						<span class="details-tomorrow time-slot-color iconfont icon-yuding">可定明日</span>
+						<span class="details-tomorrow iconfont icon-gantan">不可退</span>
 					</div>
 					<div class="ticket-right">
 						<p>￥50</p>
@@ -55,9 +57,9 @@
 				<li class="ticket-details">
 					<div class="time-slot">
 						<p class="time-slot-p">【5大景点】 广场+故宫+八达岭长城+鸟巢水立方，北京一日游</p>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">可定明日</span>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">无购物</span>
-						<span class="details-tomorrow iconfont icon-houtai-changfangxing">无自费</span>
+						<span class="details-tomorrow iconfont icon-yuding">可定明日</span>
+						<span class="details-tomorrow iconfont icon-icondingjinketui">无购物</span>
+						<span class="details-tomorrow iconfont icon-icondingjinketui">无自费</span>
 					</div>
 					<div class="ticket-right">
 						<p>￥148起</p>
@@ -73,12 +75,28 @@
 </script>
 
 <style>
+	.go-back{
+		position: absolute;
+		left: .15rem;
+		top: .15rem;
+		width: .72rem;
+		height: .72rem;
+		text-align: center;
+		line-height: .72rem;
+		border-radius: 50%;
+		color: #fff;
+		background: rgba(0,0,0,.5);
+	}
 	.gugong-header{
 		overflow: hidden;
 		margin-bottom: .2rem;
 	}
 	.gugong-img{
 		position: relative;
+		overflow: hidden;
+   		height: 0;
+   	 	width: 100%;
+    	padding-bottom: 55%;
 	}
 	.gugong-img>img{
 		width: 100%;
@@ -94,7 +112,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.gugong-img>span{
+	.gugong-number{
 		position: absolute;
 		right: .3rem;
 		bottom: .3rem;
@@ -136,11 +154,21 @@
 	.icon-houtai-changfangxing:before{
 		padding-right: .15rem;
 	}
+	.icon-tupian:before{
+		padding-right: .15rem;
+	}
+	.icon-hm-normal-local:before{
+		padding-right: .15rem;
+	}
 	.icon-zimuf:before {
 		color: #b9b9b9;
 		position: absolute;
 		right: .5rem;
 		bottom: .05rem;
+	}
+	.icon-laba:before{
+		font-size: .36rem;
+		margin-right: .1rem;
 	}
 	.gugong-site-beijing{
 		margin-bottom: 0;
@@ -149,7 +177,7 @@
 	.size-comment-zimu{
 		color: #00bcd4;
 		float: left;
-		margin-left: .5rem;
+		margin-left: .2rem;
 	}
 	.size-comment-grade{
 		color: #00bcd4;
@@ -203,8 +231,15 @@
 		-webkit-line-clamp:2;
 		-webkit-box-orient:vertical;
 	}
-	.time-slot-color~.icon-houtai-changfangxing:before{
+	.time-slot-color~.icon-gantan:before{
 		color: #ff9800;
+		margin-right: .15rem;
+	}
+	.icon-icondingjinketui:before{
+		margin-right: .15rem;
+	}
+	.icon-yuding:before{
+		margin-right: .15rem;
 	}
 	.details-tomorrow{
 		font-size: .24rem;

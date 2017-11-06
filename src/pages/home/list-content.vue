@@ -3,9 +3,9 @@
 		<h2 class="modList">热销推荐</h2>
 		<dl>
 			<dt>
- 				<img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg" title="故宫" alt="故宫">
+ 				<router-link to="/listgogong"><img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg" title="故宫" alt="故宫"></router-link>
  			</dt>
-			<dd>故宫</dd>
+			<router-link to="/listgogong"><dd>故宫</dd></router-link>
 			<dd>东方宫殿建筑代表，世界宫殿建筑典范</dd>
 			<dd><i>￥</i><span>20</span> 起</dd>
 		</dl>
