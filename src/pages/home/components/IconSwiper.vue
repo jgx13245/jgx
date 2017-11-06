@@ -79,6 +79,11 @@
 		}
 		.first li span{
 			display: block;
+			width: 100%;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 		.first li img{
 			width:0.7rem;
@@ -90,7 +95,6 @@
 		.second li{
 			width:24%;
 			height:1.6rem;
-		
 			float: left;
 			display: flex;
 			justify-content:space-around;

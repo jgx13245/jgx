@@ -1,66 +1,71 @@
 <template>
-	<div>
- 		<home-header/>
-		<banner-content :swiperInfo="swiperInfo"></banner-content>
-		<swiper-content :iconSwiper="iconSwiper" :iconSwiper1="iconSwiper1"></swiper-content>
-		<item-content></item-content>
- 		<list-content></list-content>
- 		<week-module></week-module>
+	<div>	
+		<index-header/>
+		<index-swiper :swiperInfo="swiperInfo"/>
+		<index-iconSwiper :iconSwiper="iconSwiper" :iconSwiper1="iconSwiper1" />
+		<index-activity />
+ 		<index-hostsale />
+ 		<index-weekend />
  	</div>
 </template>
 
 <script>
-import HeaderComponent from "./Header";
-import ItemComponent from "./Item";
-import BannerComponent from "./Banner";
-import ListComponent from "./list-content";
-import SwiperComponent from "./Swiper";
-import WeekComponent from "./Week";
-import Axios from "axios";
-export default {	
-	data() 	{
-		return {
+
+import Header from "./components/Header";
+import Swiper from "./components/Swiper";
+import IconSwiper from "./components/IconSwiper";
+import Activity from "./components/Activity";
+import Recommend from "./components/RecommendList";
+import WeekendList from "./components/WeekendList";
+import axios from 'axios';
+
+export default {
+	data(){
+		return{
 			swiperInfo:[],
 			iconSwiper:[],
 			iconSwiper1:[]
+
+
 		}
-	},	
+	},			
 	components: {
-		"home-header": HeaderComponent,
-		"list-content": ListComponent,
-		"banner-content": BannerComponent,
-		"swiper-content": SwiperComponent,
-		"item-content":ItemComponent,
-		"week-module":WeekComponent
+
+				"index-header": Header,
+				"index-swiper":Swiper ,
+				"index-iconSwiper": IconSwiper,
+				"index-activity":Activity ,
+				"index-hostsale":Recommend,
+				"index-weekend":WeekendList
+
 	},
 	methods:{
-			getIndexData (){
-				Axios.get('./static/index.json')
-				.then(this.handleSuccGetData.bind(this))
-				.catch(this.handleErroGetData.bind(this));	
-			},
-			handleSuccGetData:function(response){
-				if(response.status===200){
-					const {data} = response.data;
-					this.swiperInfo = data.swiperInfo;
-					this.iconSwiper = data.iconSwiper;
-					this.iconSwiper1 = data.iconSwiper1;
-	
-				}
-			},
-			handleErroGetData:function(err){
-				
-			}
-			
+		getHomeData(){
+			axios.get('/static/index.json')
+			.then(this.handleGetDataSucc.bind(this))
+			.catch(this.handleGetDataErr.bind(this)); 
 		},
-	mounted (){
-			this.getIndexData();
-
+		handleGetDataSucc:function(response){
+			if(response.status === 200){
+				const {data}=response.data;
+				this.swiperInfo=data.swiperInfo;
+				this.iconSwiper = data.iconSwiper;
+				this.iconSwiper1 = data.iconSwiper1;
+			}
+		},
+		handleGetDataErr:function(err){
+			console.log(err);
+		}
+	},
+	mounted(){
+		this.getHomeData();
 	}
 }
 
 </script>
-<style></style>
+
+<style>
+</style>
 
 
 

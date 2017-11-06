@@ -3,12 +3,12 @@
   <swiper :options="swiperOption"  ref="mySwiper">
 
     <swiper-slide v-for="item in swiperInfo" :key="item.id">
-    		<div class="swiper-img-con">
-					<!--一定要绑定:src-->
-    			<img class="swiper-img" :src="item.imgUrl">
+    	<router-link :to="item.link">
+				<div class="swiper-img-con">
+    			<img class="swiper-img" :src=item.imgUrl>
     		</div>
-		</swiper-slide>
-  
+			</router-link>
+    </swiper-slide>
 
     <div class="swiper-pagination"  slot="pagination"></div>
   </swiper>
@@ -18,8 +18,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
   export default {
-		props:["swiperInfo"],
-    name: 'carrousel',
+    props: ['swiperInfo'],
     data() {
       return {
         swiperOption: {
