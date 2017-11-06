@@ -3,8 +3,9 @@
 import Vue from 'vue'
 import App from './app/App'
 import router from './router'
+import store from './vuex'
 
-Vue.config.productionTip = false
+//Vue.config.productionTip = false
 //这行代码现像当用户执行console.info("")
 /*Vue.config.productionTip = false*/
 
@@ -12,6 +13,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
