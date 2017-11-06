@@ -1,8 +1,8 @@
 <template>
 	<div>	
 		<index-header/>
-		<index-swiper :swiperInfo="swiperInfo"/>
-		<index-iconSwiper :iconSwiper="iconSwiper" :iconSwiper1="iconSwiper1" />
+		<index-swiper :swiperInfo="this.$store.state.swiperInfo"/>
+		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
 		<index-activity />
  		<index-hostsale />
  		<index-weekend />
@@ -17,18 +17,9 @@ import IconSwiper from "./components/IconSwiper";
 import Activity from "./components/Activity";
 import Recommend from "./components/RecommendList";
 import WeekendList from "./components/WeekendList";
-import axios from 'axios';
-
-export default {
-	data(){
-		return{
-			swiperInfo:[],
-			iconSwiper:[],
-			iconSwiper1:[]
 
 
-		}
-	},			
+export default {		
 	components: {
 
 				"index-header": Header,
@@ -39,26 +30,9 @@ export default {
 				"index-weekend":WeekendList
 
 	},
-	methods:{
-		getHomeData(){
-			axios.get('/static/index.json')
-			.then(this.handleGetDataSucc.bind(this))
-			.catch(this.handleGetDataErr.bind(this)); 
-		},
-		handleGetDataSucc:function(response){
-			if(response.status === 200){
-				const {data}=response.data;
-				this.swiperInfo=data.swiperInfo;
-				this.iconSwiper = data.iconSwiper;
-				this.iconSwiper1 = data.iconSwiper1;
-			}
-		},
-		handleGetDataErr:function(err){
-			console.log(err);
-		}
-	},
+	
 	mounted(){
-		this.getHomeData();
+	this.$store.dispatch("getSwiper");
 	}
 }
 
