@@ -5,6 +5,7 @@ import App from './app/App'
 import router from './router'
 
 Vue.config.productionTip = false
+//这行代码现像当用户执行console.info("")
 
 /* eslint-disable no-new */
 new Vue({

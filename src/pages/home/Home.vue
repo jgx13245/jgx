@@ -16,18 +16,22 @@ import BannerComponent from "./Banner";
 import ListComponent from "./list-content";
 import SwiperComponent from "./Swiper";
 import WeekComponent from "./Week";
+import Axios from "axios"
 export default {			
 	components: {
-
-				"home-header": HeaderComponent,
-				"list-content": ListComponent,
-				"banner-content": BannerComponent,
-				"swiper-content": SwiperComponent,
-				"item-content":ItemComponent,
-				"week-module":WeekComponent
-
-			}
-		}
+		"home-header": HeaderComponent,
+		"list-content": ListComponent,
+		"banner-content": BannerComponent,
+		"swiper-content": SwiperComponent,
+		"item-content":ItemComponent,
+		"week-module":WeekComponent
+		},
+	mounted:function(){
+		Axios.get('home/b').then(function(res){
+			console.log(res.data)
+		})
+	}	
+	}
 
 </script>
 
