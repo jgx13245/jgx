@@ -4,7 +4,7 @@
 		<index-swiper :swiperInfo="this.$store.state.swiperInfo"/>
 		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
 		<index-activity />
- 		<index-hostsale />
+ 		<index-hotsale :recommendInfo="this.$store.state.recommendInfo" />
  		<index-weekend />
  	</div>
 </template>
@@ -19,14 +19,15 @@ import Recommend from "./components/RecommendList";
 import WeekendList from "./components/WeekendList";
 
 
-export default {		
+export default {
+	
 	components: {
 
 				"index-header": Header,
 				"index-swiper":Swiper ,
 				"index-iconSwiper": IconSwiper,
 				"index-activity":Activity ,
-				"index-hostsale":Recommend,
+				"index-hotsale":Recommend,
 				"index-weekend":WeekendList
 
 	},

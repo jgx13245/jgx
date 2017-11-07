@@ -8,7 +8,8 @@ export default new Vuex.Store({
     state:{
         swiperInfo:[],
         iconSwiper:[],
-        iconSwiper1:[]
+        iconSwiper1:[],
+        recommendInfo: []
 
     },
     actions:{
@@ -17,9 +18,10 @@ export default new Vuex.Store({
 			.then((response)=>{
                 if(response.status === 200){
                     const {data}=response.data;
-                     context.commit("changeSwiprInfo",data.swiperInfo);
-                     context.commit("changeIconSwipr",data.iconSwiper);
-                     context.commit("changeIconSwipr1",data.iconSwiper1)
+                    context.commit("changeSwiprInfo",data.swiperInfo);
+                    context.commit("changeIconSwipr",data.iconSwiper);
+                     					context.commit("changeIconSwipr1",data.iconSwiper1)
+                     					context.commit("changeRecommendInfo", data.recommendInfo)
                 
                 }
             })
@@ -34,7 +36,10 @@ export default new Vuex.Store({
         },
         changeIconSwipr1(state,data){
             state.iconSwiper1 = data
-        }
+        },
+        changeRecommendInfo(state, data){
+			state.recommendInfo = data
+		}
 
     },
     getters:{},
