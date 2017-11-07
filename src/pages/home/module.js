@@ -5,12 +5,8 @@ export default{
         iconSwiper:[],  
         iconSwiper1:[],
         activityInfo:[],
-<<<<<<< HEAD
-		recommendInfo:[]
-=======
+		recommendInfo:[],
         weekend:[]
-
->>>>>>> 34096c0d8223bc6008eb9f5d5e5c9c77d7e9fb35
     },
     actions:{
         getIndexInfo(context){
@@ -29,12 +25,8 @@ export default{
             state.iconSwiper = data.iconSwiper;
             state.iconSwiper1 = data.iconSwiper1;
             state.activityInfo = data.activityInfo;
-<<<<<<< HEAD
             state.recommendInfo = data.recommendInfo;
-=======
             state.weekend = data.weekend;
-            console.log(data.weekend);
->>>>>>> 34096c0d8223bc6008eb9f5d5e5c9c77d7e9fb35
         }
     },
     getters:{
@@ -43,11 +35,8 @@ export default{
 		       !state.iconSwiper.length&&
 		   	   !state.iconSwiper1.length&&
 		       !state.activityInfo.length&&
-<<<<<<< HEAD
-    		   !state.recommendInfo.length){
-=======
+    		   !state.recommendInfo.length&&
     		   !state.weekend.length){
->>>>>>> 34096c0d8223bc6008eb9f5d5e5c9c77d7e9fb35
     				return true;
     		}else{
     			return false;
