@@ -53,7 +53,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.list {
 		width: 100%;
 	}

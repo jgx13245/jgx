@@ -10,17 +10,21 @@
 		</div>
 
 		<div class="item1-img">
-			<li class="dl">
-				<img src="http://img1.qunarzz.com/piao/fusion/1710/a2/e395615b16fb1302.png" />
+			
+			<li class="dl" v-for="item in activityInfo" :key="item.id">
+				<img :src="item.imgUrl" :alt="item.alt"/>
 			</li>
-			<li class="dl">
+			<!--<li class="dl">
 				<img src="http://img1.qunarzz.com/piao/fusion/1710/54/1685d2108b652302.png" />
-			</li>
+			</li>-->
 		</div>
 	</div>
 </template>
 
 <script>
+export default{
+	props:["activityInfo"]
+}
 </script>
 
 <style>
@@ -58,12 +62,16 @@
 	}
 	.item1-img {
 		width: 100%;
+		display: flex;
 		overflow: hidden;
 	}
 	
 	.dl {
-		width: 50%;
-		float: left;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 21%;
+		flex:1;
 	}
 	
 	.dl img {

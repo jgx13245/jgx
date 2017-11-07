@@ -1,36 +1,42 @@
 <template>
-	<div>
- 		<home-header/>
-		<banner-content></banner-content>
-		<swiper-content></swiper-content>
-		<item-content></item-content>
- 		<list-content></list-content>
- 		<week-module></week-module>
+	<div>	
+		<index-header/>
+		<index-swiper :swiperInfo="this.$store.state.swiperInfo"/>
+		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
+		<index-activity :activityInfo="this.$store.state.activityInfo"/>
+ 		<index-hostsale />
+ 		<index-weekend />
  	</div>
 </template>
 
 <script>
-import HeaderComponent from "./Header";
-import ItemComponent from "./Item";
-import BannerComponent from "./Banner";
-import ListComponent from "./list-content";
-import SwiperComponent from "./Swiper";
-import WeekComponent from "./Week";
-export default {			
+
+import Header from "./components/Header";
+import Swiper from "./components/Swiper";
+import IconSwiper from "./components/IconSwiper";
+import Activity from "./components/Activity";
+import Recommend from "./components/RecommendList";
+import WeekendList from "./components/WeekendList";
+
+
+
+export default {		
 	components: {
+				"index-header": Header,
+				"index-swiper":Swiper ,
+				"index-iconSwiper": IconSwiper,
+				"index-activity":Activity ,
+				"index-hostsale":Recommend,
+				"index-weekend":WeekendList
 
-				"home-header": HeaderComponent,
-				"list-content": ListComponent,
-				"banner-content": BannerComponent,
-				"swiper-content": SwiperComponent,
-				"item-content":ItemComponent,
-				"week-module":WeekComponent
-
-			}
-		}
+	},
+	
+	mounted(){
+	this.$store.dispatch("getSwiper");
+	}
+}
 
 </script>
-
 
 <style>
 </style>
