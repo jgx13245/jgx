@@ -4,8 +4,8 @@ export default{
         swiperInfo:[],
         iconSwiper:[],  
         iconSwiper1:[],
-        activityInfo:[]
-
+        activityInfo:[],
+		recommendInfo:[]
     },
     actions:{
         getIndexInfo(context){
@@ -24,6 +24,7 @@ export default{
             state.iconSwiper = data.iconSwiper;
             state.iconSwiper1 = data.iconSwiper1;
             state.activityInfo = data.activityInfo;
+            state.recommendInfo = data.recommendInfo;
         }
     },
     getters:{
@@ -31,7 +32,8 @@ export default{
     		if(!state.swiperInfo.length &&
 		       !state.iconSwiper.length&&
 		   	   !state.iconSwiper1.length&&
-		       !state.activityInfo.length){
+		       !state.activityInfo.length&&
+    		   !state.recommendInfo.length){
     				return true;
     		}else{
     			return false;

@@ -18,8 +18,13 @@
 </template>
 
 <script>
+	import { mapState } from "vuex";
 	export default {
-		props: ["recommendInfo"]
+		computed:mapState({
+		recommendInfo(state){
+			return state.home.recommendInfo;
+		}
+	}),
 	}
 </script>
 
