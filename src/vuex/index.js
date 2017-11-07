@@ -1,6 +1,7 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
-import axios from 'axios';
+import home from "../pages/home/module.js";
+/*import home from "../pages/listgogong/module.js";*/
 
 Vue.use(Vuex);
 
@@ -9,7 +10,7 @@ export default new Vuex.Store({
         swiperInfo:[],
         iconSwiper:[],
         iconSwiper1:[],
-        weekend: []
+        weekend: [],
 
     },
     actions:{
@@ -43,5 +44,7 @@ export default new Vuex.Store({
 
     },
     getters:{},
-
+	modules:{
+		home:home 
+	}
 })

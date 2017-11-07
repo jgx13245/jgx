@@ -18,7 +18,6 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
   export default {
-    props: ['swiperInfo'],
     data() {
       return {
         swiperOption: {
@@ -29,6 +28,11 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper'
           observeParents: true,     
         }
       } 
+    },
+    computed:{
+    	swiperInfo(){
+    		return this.$store.state.home.swiperInfo;
+    	}
     },
    
     mounted() {   

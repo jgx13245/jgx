@@ -1,22 +1,26 @@
 <template>
 	<div class="week-module"> 
-		<h2 class="week-where">周末去哪儿</h2>
-		<router-link :to="item.link">
+		<h2 class="week-where">周末去哪儿</h2>		
 			<div class="week-list" v-for="item in weekend" :key="item.id">
-				<a href="#" class="week-a">
+				<a href="#" class="week-a" :alt="item.weekName">
 					<img :src=item.imgUrl class="week-img"/>
 				</a>
 				<h3 class="week-headline">{{item.weekName}}</h3>
 				<p class="week-describe">{{item.nameDetail}}</p>
 			</div>
-		</router-link>
  	</div>
 </template>
 
 <script>
-	
-	
-	
+	import { mapState } from "vuex";
+	export default{
+		computed:mapState({
+			weekend(state){
+				return state.home.weekend;
+			}
+		})
+	}
+		
 </script>
 
 <style>
@@ -30,10 +34,13 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	/*.week-list{
+	.week-a{
+		display: block;
+		overflow: hidden;
 		width: 100%;
-		height: 4.08rem;
-	}*/
+		height: 0;
+		padding-bottom: 38%;
+	}
 	.week-img{
 		width: 100%;
 	}
