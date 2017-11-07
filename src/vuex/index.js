@@ -8,7 +8,8 @@ export default new Vuex.Store({
     state:{
         swiperInfo:[],
         iconSwiper:[],
-        iconSwiper1:[]
+        iconSwiper1:[],
+        weekend: []
 
     },
     actions:{
@@ -19,7 +20,8 @@ export default new Vuex.Store({
                     const {data}=response.data;
                      context.commit("changeSwiprInfo",data.swiperInfo);
                      context.commit("changeIconSwipr",data.iconSwiper);
-                     context.commit("changeIconSwipr1",data.iconSwiper1)
+                     context.commit("changeIconSwipr1",data.iconSwiper1);
+                     context.commit("changeWeekend",data.weekend);
                 
                 }
             })
@@ -34,6 +36,9 @@ export default new Vuex.Store({
         },
         changeIconSwipr1(state,data){
             state.iconSwiper1 = data
+        },
+        changeWeekend(state,data){
+            state.weekend = data
         }
 
     },

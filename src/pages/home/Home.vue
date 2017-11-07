@@ -5,7 +5,7 @@
 		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
 		<index-activity />
  		<index-hostsale />
- 		<index-weekend />
+ 		<index-weekend :weekend="this.$store.state.weekend"/>
  	</div>
 </template>
 
