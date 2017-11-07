@@ -1,11 +1,11 @@
 <template>
 	<div>	
 		<index-header/>
-		<index-swiper :swiperInfo="this.$store.state.swiperInfo"/>
-		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
-		<index-activity :activityInfo="this.$store.state.activityInfo"/>
- 		<index-hostsale />
- 		<index-weekend />
+		<index-swiper/>
+		<index-iconSwiper/>
+		<index-activity/>
+ 		<index-hostsale/>
+ 		<index-weekend/>
  	</div>
 </template>
 
@@ -32,7 +32,10 @@ export default {
 	},
 	
 	mounted(){
-	this.$store.dispatch("getSwiper");
+		if(this.$store.getters.shouldGetData){
+			this.$store.dispatch("getIndexInfo");
+		}
+		
 	}
 }
 

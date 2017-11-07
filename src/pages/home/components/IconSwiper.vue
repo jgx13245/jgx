@@ -35,7 +35,6 @@
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 		export default {
-			props:["iconSwiper","iconSwiper1"],
 			name: 'carrousel',
 			data() {
 				return {
@@ -48,6 +47,14 @@
 					}
 				} 
 			},
+			computed:{
+	    	iconSwiper(){
+	    		return this.$store.state.home.iconSwiper;
+	    	},
+	    	iconSwiper1(){
+	    		return this.$store.state.home.iconSwiper1;
+	    	},
+    	},
 		
 			mounted() {   
 				this.$refs.mySwiper.swiper.slideTo(3, 1000, false)

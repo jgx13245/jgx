@@ -10,20 +10,26 @@
 		</div>
 
 		<div class="item1-img">
-			
 			<li class="dl" v-for="item in activityInfo" :key="item.id">
 				<img :src="item.imgUrl" :alt="item.alt"/>
 			</li>
-			<!--<li class="dl">
-				<img src="http://img1.qunarzz.com/piao/fusion/1710/54/1685d2108b652302.png" />
-			</li>-->
 		</div>
 	</div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default{
-	props:["activityInfo"]
+	computed:mapState({
+		activityInfo(state){
+			return state.home.activityInfo;
+		}
+	}),
+	/*computed:{
+    	activityInfo(){
+    		return this.$store.state.home.activityInfo;
+    	}
+    }*/
 }
 </script>
 
