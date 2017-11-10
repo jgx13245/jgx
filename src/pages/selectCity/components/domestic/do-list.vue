@@ -55,7 +55,7 @@ export default {
 		},
 
 		updated() {
-				// console.log(this.num)
+			//console.log(this.num)
 	
 			   for(var j=0;j<this.$refs.item.length;j++){
 				  this.alpha[this.$refs.item[j].innerHTML]= this.$refs.item[j].offsetTop

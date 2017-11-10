@@ -45,9 +45,8 @@ export default {
 			this.word = word;
 		},
 		changeMove(num) {
-			this.num = num
-			// console.log(this.num);
-
+			this.num = num;
+			//console.log(this.num);
 		},
 		changeRemove() {
 			this.show=false

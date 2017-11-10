@@ -5,8 +5,8 @@ export default{
     state:{
         allSortInfo:[],
         detailInfo:[],
-        sightInfo:[]//,
-       // sightRedInfo:[]
+        sightInfo:[],
+        sightRedInfo:[]
     },
     actions:{
         getListClassifyInfo(context){
@@ -24,11 +24,11 @@ export default{
             state.allSortInfo = data.allSortInfo;
             state.detailInfo = data.detailInfo;
             state.sightInfo=data.sightInfo;
-        }//,
-        // sightRedInfo(state,data){
-        //     //var num=(Math.random()*state.sightInfo.length).toFixed(0)
-        //     state.sightInfo.push(state.sightInfo);
-        // }
+        },
+        sightRedInfo(state,data){
+            //var num=(Math.random()*state.sightInfo.length).toFixed(0)
+            state.sightInfo.push(...state.sightInfo);
+        }
     },
     getters:{
         shouldGetListClassifyData(state){

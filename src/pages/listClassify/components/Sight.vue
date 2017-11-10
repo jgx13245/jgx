@@ -29,23 +29,23 @@ require('../../../utils/iscroll-probe.js')
 		computed:{
 			sightInfo(){
 				return 	this.$store.state.listClassify.sightInfo;
-			}//,
-			// sightRedInfo(){
-			// 	return this.$store.state.listClassify.sightRedInfo;
-			// }
+			},
+			sightRedInfo(){
+				return this.$store.state.listClassify.sightRedInfo;
+			}
 			
 		},	
 		mounted(){
 			this.myScroll =new IScroll('#wrapper2', { probeType:1, mouseWheel: true });
 			
-			// this.myScroll.on("scroll",()=>{
-			// 	if(this.myScroll.y>25){
-			// 		this.$store.commit("sightRedInfo");
-			// 	}
-			// 	if(this.myScroll.y<(-this.sightRedInfo.length * 164)){
-			// 		this.$store.commit("sightRedInfo");
-			// 	}
-			// })
+			this.myScroll.on("scroll",()=>{
+				if(this.myScroll.y>25){
+					this.$store.commit("sightRedInfo");
+				}
+				if(this.myScroll.y<(-this.sightRedInfo.length * 164)){
+					this.$store.commit("sightRedInfo");
+				}
+			})
 		},
 		updated(){
 			this.myScroll.refresh();
@@ -55,7 +55,7 @@ require('../../../utils/iscroll-probe.js')
 
 <style scoped>
 	#wrapper2{
-		height: 9rem;
+		height:11rem;
 		overflow: hidden;
 	}
 	h4{
