@@ -49,9 +49,20 @@ export default {
 			}
 		}),
 
-		methods:{
-		
 	
+		watch :{
+		num() {
+			for(var j=0;j<this.$refs.item.length;j++){
+				  this.alphanum[j]= this.$refs.item[j].offsetTop
+			   }	
+				for(var i  in this.alphanum){
+					if(i==this.num){
+					
+						document.documentElement.scrollTop=this.alphanum[this.num]+38;
+						 
+					}
+				}
+			}
 		},
 
 		updated() {
@@ -70,17 +81,7 @@ export default {
 				}
 
 
-			// 	 for(var j=0;j<this.$refs.item.length;j++){
-			// 	  this.alphanum[j]= this.$refs.item[j].offsetTop
-			//    }
-			// //    console.log(this.alphanum)
-			// 	for(var i  in this.alphanum){
-			// 		if(i==this.num){
-			// 			// alert()
-			// 			document.documentElement.scrollTop=this.alphanum[this.num]+38;
-						 
-			// 		}
-			// 	}
+			
 			
 		   
 			
