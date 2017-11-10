@@ -67,7 +67,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 	#wrapper {
 		width: 100%;
 		max-height:6rem;
@@ -94,7 +94,7 @@ export default{
 	}
 	.search-input{
 		    display: inline-block;
-		    width: 5.4rem;
+		    width: 4.2rem;
 		    height: 0.65rem;
 		    font-size: .28rem;
 		    border-radius: 0.1rem;
