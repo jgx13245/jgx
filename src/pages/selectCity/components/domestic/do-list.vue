@@ -51,6 +51,7 @@ export default {
 
 	
 		watch :{
+			//监听传输过来的值，做成函数
 		num() {
 			for(var j=0;j<this.$refs.item.length;j++){
 				  this.alphanum[j]= this.$refs.item[j].offsetTop
@@ -66,8 +67,6 @@ export default {
 		},
 
 		updated() {
-			//console.log(this.num)
-	
 			   for(var j=0;j<this.$refs.item.length;j++){
 				  this.alpha[this.$refs.item[j].innerHTML]= this.$refs.item[j].offsetTop
 			   }
@@ -80,10 +79,6 @@ export default {
 					}
 				}
 
-
-			
-			
-		   
 			
 		}
 	

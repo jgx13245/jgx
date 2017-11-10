@@ -1,7 +1,7 @@
 
 
 <template>
-	<div class="position">
+	<div class="position" v-show="show" ref="mmm">
 		<div class="your-position">
 			<div class="CityChange-main-title">您的位置</div>
 			<div class="your-position-now">
@@ -18,7 +18,7 @@
 		</div>
 		<ul>
 			<li v-for="item in Foreign" :key="item.id"  class="cityPosition">
-				<div class="CityChange-main-title">{{item[0]}}</div>
+				<div class="CityChange-main-title" ref="item">{{item[0]}}</div>
 				<ul>
 					<li v-for="item in item[1].city" class="city-detail" :key="item.id" >{{item.cityarea}}</li>
 				</ul>
@@ -31,7 +31,15 @@
 <script>
 
 import {mapState} from "vuex"
+
 export default {	
+	props:['show','word','num'],
+	data() {
+		return {
+			alpha:{},
+			alphanum:{}
+		}
+	},
 	computed: mapState({
 			Foreign(state){
 					return state.selectCity.Foreign
@@ -39,9 +47,39 @@ export default {
 			foreignHotCity(state){
 					return state.selectCity.foreignHotCity
 			}
-		}
+		}),
+	watch :{
+		//监听传输过来的值，做成函数
+			num() {
+				for(var j=0;j<this.$refs.item.length;j++){
+						this.alphanum[j]= this.$refs.item[j].offsetTop
+				}	
+				//console.log(this.alphanum);
+				for(var i  in this.alphanum){
+					if(i==this.num){
+						document.documentElement.scrollTop=this.alphanum[this.num]-46;
+					}
+				}
+			},
+			word() {
+				for(var j=0;j<this.$refs.item.length;j++){
+				this.alpha[this.$refs.item[j].innerHTML]= this.$refs.item[j].offsetTop;
+			}
 			
-	)
+			for(var i  in this.alpha){
+				if(i==this.word){
+					document.documentElement.scrollTop=this.alpha[this.word]-46;
+					break;
+				}
+			}
+			}
+
+
+	},
+
+	updated() {
+			
+	}
 
 
 }

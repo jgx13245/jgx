@@ -1,14 +1,23 @@
 
 <template>
 	<div class="do-serach">
-		<input type="text" class="input-city" placeholder="输入城市名或拼音">
+		<input type="text" class="input-city" placeholder="输入城市名或拼音" ref="input" @keyup="handleGet" @blur="handleBlur">
  	</div>
 </template>
 
 <script>
 
 export default {			
-
+    methods:{
+         handleBlur() {
+            this.$emit("changeRemove")
+        },
+        handleGet() {
+            const value = this.$refs.input.value
+            this.$emit("changeSerach",value);
+        }
+       
+    }
 }
 
 </script>

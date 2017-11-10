@@ -20,10 +20,6 @@ export default {
 		}),
 	
 	methods:{
-		
-		mounted(){
-			console.log(document.getElementsByName('fan'))
-		},
 		handleWordClick(e) {
 			var m  =e.target.innerHTML;
 			 this.$emit("changeWord",m);
@@ -39,17 +35,13 @@ export default {
 			const ulOffsetTop = ul.offsetTop+38;
 			const MouseOffsetTop = e.touches[0].clientY;
 			const v = MouseOffsetTop-ulOffsetTop;
-			//console.log(m);
-			//console.log(n);
 			const num =parseInt(v/20);
-			//console.log(num);
 			 this.$emit("changeMove",num);
 			 
 		},
 		handleTouchEnd(e) {
 				document.removeEventListener("touchmove", this.handleTouchMove);
 				document.removeEventListener("touchend", this.handleTouchEnd);
-			
 
 		}
 
