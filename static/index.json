@@ -17,9 +17,6 @@
             "imgUrl":"http://img1.qunarzz.com/piao/fusion/1609/15/630b82d932a3c402.jpg_640x200_862e836b.jpg",
             "link":""
         }],
-
-
-        
         "iconSwiper":[{
             "id":1,
             "imgUrl":"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
@@ -114,8 +111,96 @@
             "imgUrl":"http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
             "iconName":"全部",
             "link":""
-        }]
+        }],
+        "weekend":[{
+        	"id":1,
+        	 "imgUrl":"http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
+        	"weekName":"北京温泉排行榜",
+        	"nameDetail":"细数北京温泉，温暖你的冬天",
+        	"link":""
+        },
+        {
+        	"id":2,
+        	 "imgUrl":"http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+        	"weekName":"寻找北京的皇城范儿",
+        	"nameDetail":"数百年的宫廷庙宇，至今依旧威严霸气",
+        	"link":""
+        },
+        {
+        	"id":3,
+        	 "imgUrl":"http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg",
+        	"weekName":"北京必游TOP10",
+        	"nameDetail":"来北京必去的景点非这些地方莫属",
+        	"link":""
+        },
+        {
+        	"id":4,
+        	 "imgUrl":"http://img1.qunarzz.com/sight/source/1509/81/0412da9c4db66a.jpg_r_640x214_8e23871e.jpg",
+        	"weekName":"登高望远秋色佳",
+        	"nameDetail":"山顶满眼彩色，此情此景醉了",
+        	"link":""
+        },
+        {
+        	"id":5,
+        	 "imgUrl":"http://img1.qunarzz.com/sight/source/1509/28/1bb74b851279e6.jpg_r_640x214_64ebf0ee.jpg",
+        	"weekName":"秋高气爽去礼佛",
+        	"nameDetail":"秋风伴着美妙经声，品尝秋的另一番滋味",
+        	"link":""
+        }],
+        
+        "activityInfo":[{
+        	"id":1,
+            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1710/a2/e395615b16fb1302.png",
+            "alt":"精选温泉",
+            "link":""
+		},
+		{
+        	"id":2,
+            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1710/54/1685d2108b652302.png",
+            "alt":"金秋大促",
+            "link":""
+		}],
+        "recommendInfo": [{
+			"id": 1,
+			"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
+			"alt": "故宫",
+			"recname": "故宫",
+			"explain": "东方宫殿建筑代表，世界宫殿建筑典范",
+			"sale": "￥",
+			"num": 20
+		},
+		{
+			"imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_140x140_97813766.jpg",
+			"alt": "八达岭长城",
+			"recname": "八达岭长城",
+			"explain": "不到长城非好汉",
+			"sale": "￥",
+			"num": 25
+		},
+		{
+			"imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_140x140_e20be8e0.jpg",
+			"alt": "颐和园",
+			"recname": "颐和园",
+			"explain": "保存完整的一座皇家行宫御苑",
+			"sale": "￥",
+			"num": 22
+		},
+		{
+			"imgUrl": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_140x140_b05eb1df.jpg",
+			"alt": "北京欢乐谷",
+			"recname": "北京欢乐谷",
+			"explain": "七大主题园区带你畅享北京欢乐谷",
+			"sale": "￥",
+			"num": 15
+		},
+		{
+			"imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b6378fd3b2e1d86a3.img.jpg_140x140_eae81520.jpg",
+			"alt": "慕田峪长城",
+			"recname": "慕田峪长城",
+			"explain": "秀美长城，关键是人少",
+			"sale": "￥",
+			"num": 19.1
+		}]
 
-
-    }
+   	}
 }

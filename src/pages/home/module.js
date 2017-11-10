@@ -3,7 +3,11 @@ export default{
     state:{
         swiperInfo:[],
         iconSwiper:[],
-        iconSwiper1:[]
+        iconSwiper1:[],
+        recommendInfo:[],
+        weekend:[],
+        activityInfo:[]
+
 
     },
     actions:{
@@ -22,18 +26,24 @@ export default{
             state.swiperInfo = data.swiperInfo;
             state.iconSwiper = data.iconSwiper;
             state.iconSwiper1 = data.iconSwiper1;
+            state.activityInfo = data.activityInfo;
+            state.recommendInfo = data.recommendInfo;
+            state.weekend = data.weekend;
         }
     },
     getters:{
         shouldGetData(state){
-            if(!store.state.iconSwiper.length && 
-                !store.state.iconSwiper1.length &&
-                !store.state.swiperInfo.length){
-                    return true
-            }else{
-                return false
-            }
-        }
+    		if(!state.swiperInfo.length &&
+		       !state.iconSwiper.length&&
+		   	   !state.iconSwiper1.length&&
+		       !state.activityInfo.length&&
+    		   !state.recommendInfo.length&&
+    		   !state.weekend.length){
+    				return true;
+    		}else{
+    			return false;
+    		}
+    	}
     }
 
 }

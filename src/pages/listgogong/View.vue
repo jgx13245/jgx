@@ -4,7 +4,7 @@
 		
 		<div id="View">
 			
-		 	<div class="view" v-for ="item in message">
+		 	<div class="view" v-for ="item in message" :key="item.id">
 		 		<div class="view-content">
 		 			<div class="picture"><img :src="item.img"/></div>
 		 			<div class="name">{{item.name}}</div>

@@ -1,24 +1,33 @@
 <template>
 	<div>
  		<list-header/>
-		 <list-filter></list-filter>
-		 <list-sight></list-sight>
+		<list-filter @change="change"></list-filter>
+		<list-sight ></list-sight>
  	</div>
 </template>
-
 <script>
-import ListComponent from "./Header";
-import ListFilter from "./Filter";
-import SightComponent from "./Sight";
+import ListComponent from "./components/Header";
+import ListFilter from "./components/Filter";
+import SightComponent from "./components/Sight";
 
 export default {
-		
 	components: {
-				"list-header": ListComponent,
-				"list-filter":ListFilter,
-				"list-sight":SightComponent
-			}
+		"list-header": ListComponent,
+		"list-filter":ListFilter,
+		"list-sight":SightComponent
+	},
+	methods:{
+		change:function(e) {
+			this.sight=!e;
+		}
+	},
+	mounted(){
+		if(this.$store.getters.shouldGetListClassifyData){
+			this.$store.dispatch("getListClassifyInfo");
+		}
+		
 	}
+}
 
 </script>
 
