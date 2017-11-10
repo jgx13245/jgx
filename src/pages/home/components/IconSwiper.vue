@@ -33,9 +33,9 @@
 
 <script>
 	import { swiper, swiperSlide } from 'vue-awesome-swiper'
+	import {mapState} from "vuex"
 
 		export default {
-			props:["iconSwiper","iconSwiper1"],
 			name: 'carrousel',
 			data() {
 				return {
@@ -48,6 +48,14 @@
 					}
 				} 
 			},
+			computed: mapState({
+				iconSwiper(state){
+					return state.home.iconSwiper
+				},
+				iconSwiper1(state){
+					return state.home.iconSwiper1
+				}
+			}),
 		
 			mounted() {   
 				this.$refs.mySwiper.swiper.slideTo(3, 1000, false)

@@ -16,9 +16,10 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import {mapState} from "vuex"
 
   export default {
-    props: ['swiperInfo'],
+    
     data() {
       return {
         swiperOption: {
@@ -30,6 +31,18 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper'
         }
       } 
     },
+
+    computed: mapState({
+      swiperInfo(state){
+        return state.home.swiperInfo
+        console.log(state.home.swiperInfo )
+      }
+    }),
+    // computed:{
+    //   swiperInfo(){
+    //     return this.$store.state.home.swiperInfo
+    //   }
+    // },
    
     mounted() {   
       this.$refs.mySwiper.swiper.slideTo(3, 1000, false)

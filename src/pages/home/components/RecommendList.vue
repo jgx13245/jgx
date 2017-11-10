@@ -41,9 +41,12 @@
 			<dd>秀美长城，关键是人少</dd>
 			<dd><i>￥</i><span>19.1</span> 起</dd>
 		</dl>
+		<router-link to="/listClassify">
 		<div class="botList">
 			<a>查看所有产品</a>
 		</div>
+		</router-link>
+
 	</div>
 </template>
 

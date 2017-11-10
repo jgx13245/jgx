@@ -5,7 +5,9 @@ import ListClassify from '@/pages/listClassify/ListClassify'
 import List from '@/pages/listHot/list-Home'
 import listCity from '@/pages/listHot/List-city'
 import Listgugong from '@/pages/listgogong/List'
-
+import selectCity from '@/pages/selectCity/select-Home'
+import order from '@/pages/order/Order'
+import OneDayTour from '@/pages/oneDayTour/Tour'
 
 Vue.use(Router)
 
@@ -34,6 +36,21 @@ export default new Router({
       path:'/listgogong',
       name:'List',
       component:Listgugong
+    },
+    {
+      path:'/selectCity',
+      name:'selectCity',
+      component:selectCity
+    },{
+      path:'/order',
+      name:'Order',
+      component:order
+
+    },{
+      
+        path:'/oneDayTour',
+        name:'Tour',
+        component:OneDayTour
     }
   ]
 })

@@ -1,42 +1,15 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
-import axios from 'axios';
-
+import home from '../pages/home/module.js'
+import selectCity from '../pages/selectCity/module.js'
+import oneDayTour from "../pages/oneDayTour/module.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state:{
-        swiperInfo:[],
-        iconSwiper:[],
-        iconSwiper1:[]
-
-    },
-    actions:{
-        getSwiper(context){
-            axios.get('/static/index.json')
-			.then((response)=>{
-                if(response.status === 200){
-                    const {data}=response.data;
-                     context.commit("changeSwiprInfo",data.swiperInfo);
-                     context.commit("changeIconSwipr",data.iconSwiper);
-                     context.commit("changeIconSwipr1",data.iconSwiper1)
-                
-                }
-            })
-        }
-    },
-    mutations:{
-        changeSwiprInfo(state,data){
-            state.swiperInfo = data
-        },
-        changeIconSwipr(state,data){
-            state.iconSwiper = data
-        },
-        changeIconSwipr1(state,data){
-            state.iconSwiper1 = data
-        }
-
-    },
-    getters:{},
+    modules:{
+        home:home,
+        selectCity:selectCity,
+        oneDayTour:oneDayTour
+    }
 
 })

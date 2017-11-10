@@ -3,8 +3,11 @@
 		<div class="ticket-type">
 			<h3 class="iconfont icon-piaowu"> 故宫当日票</h3>
 			<!--<div class="ticket-types" id="ticket-types">-->
+				<router-link to="/order">
 				<dl @click="handleClick">
+
 					<dt>
+
 						【当日票】故宫成人票<em>凭身份证入园</em>
 					</dt>
 					<dd>
@@ -14,6 +17,7 @@
 						
 					</div>
 				</dl>
+				</router-link>
 				<dl>
 					<dt>
 						【当日票】故宫学生票<em>凭身份证入园</em>

@@ -1,8 +1,8 @@
 <template>
 	<div>	
 		<index-header/>
-		<index-swiper :swiperInfo="this.$store.state.swiperInfo"/>
-		<index-iconSwiper :iconSwiper="this.$store.state.iconSwiper" :iconSwiper1="this.$store.state.iconSwiper1" />
+		<index-swiper/>
+		<index-iconSwiper/>
 		<index-activity />
  		<index-hostsale />
  		<index-weekend />
@@ -32,7 +32,15 @@ export default {
 	},
 	
 	mounted(){
-	this.$store.dispatch("getSwiper");
+		// if( !this.$store.state.iconSwiper.length && 
+		// 	!this.$store.state.iconSwiper1.length &&
+		// 	!this.$store.state.swiperInfo.length){
+		// 	 this.$store.dispatch("getSwiper");
+		// }
+			// if(this.$store.getters.shouldGetData){
+			 	this.$store.dispatch("getSwiper");
+			// }
+		
 	}
 }
 

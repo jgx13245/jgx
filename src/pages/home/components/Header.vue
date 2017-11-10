@@ -10,7 +10,7 @@
 	
  		<div class="header-right">
  			<div class="header-city-wrapper">
-				 <router-link to="/listClassify">
+				 <router-link to="/selectCity">
  					<span class="header-city">北京</span>
 				 </router-link>
  			</div>
