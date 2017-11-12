@@ -6,14 +6,20 @@
 			<span class="search">搜索</span>
 		</div>
 		
+		
 		<div class="tourList" v-show="show">
-			<span class="viewList " v-for="item in tourList" :key="item.id">
-				{{item.name}}
-			</span>
+			<div id="wrapper1">
+				<div id="scroller" style="width:34rem">		
+					<span class="viewList " v-for="item in tourList" :key="item.id">
+						{{item.name}}
+					</span>
+				</div>
+			</div>
 			<div class="down" @click="handleClick">
 				<span class="iconfont icon-xiangxia-copy" ></span>
 			</div>
 		</div>
+
 		
 		<div class="tourList1" v-show="!show">
 			<h3 class="listSelect">游玩景点</h3>
@@ -36,7 +42,7 @@
 
 <script>
 import { mapState } from "vuex";
-require ('../../../utils/iscroll-probe.js');
+import myScroll1 from "../../../utils/iscroll-probe.js"
 export default{
 	data:function(){
 		return{
@@ -57,21 +63,23 @@ export default{
 		}
 	},
 	mounted(){
-		var myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true });
-		
-	},
-	updated(){
-		console.log(2);
-		//this.myScroll.refresh();
+		//var myScroll = new IScroll('#wrapper', { probeType: 3, mouseWheel: true });
+		setTimeout(function(){
+				var myScroll1 = new IScroll('#wrapper1', {  scrollX: true, scrollY: false, mouseWheel: true });
+		},1000)
+	
+
 	}
+
 }
 </script>
 
 <style scoped>
-	#wrapper {
-		width: 100%;
-		max-height:6rem;
-		overflow: hidden;
+	#wrapper1{
+	width: 50rem;
+	height:0.88rem;
+	width: 100%;
+	overflow: hidden;
 	}
 	
 	.list {
@@ -94,7 +102,7 @@ export default{
 	}
 	.search-input{
 		    display: inline-block;
-		    width: 4.2rem;
+		    width: 4.3rem;
 		    height: 0.65rem;
 		    font-size: .28rem;
 		    border-radius: 0.1rem;
@@ -118,13 +126,15 @@ export default{
 		    background: #e5e7e8;
 		    position: relative;
 		    overflow: hidden;
+			white-space: nowrap;
 	}
+	
 	.viewList{
-		display: block;
+		display: inline-block;
 		height: .56rem;
         padding: 0 .22rem;
         margin: .15rem .1rem;
-		float: left;
+		/*float: left;*/
 		background: #fff;
 		font-size: .26rem;
     	line-height: .56rem;

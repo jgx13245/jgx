@@ -69,7 +69,7 @@
 		padding-bottom: 16%;
 	}
 	.ticket-site-p{
-		width: 5.3rem;
+		width: 4.3rem;
 		font-size: .3rem;
 		line-height: .36rem;
 		word-wrap : break-word;
