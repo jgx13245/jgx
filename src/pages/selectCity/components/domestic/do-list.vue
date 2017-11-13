@@ -56,6 +56,7 @@ export default {
 			for(var j=0;j<this.$refs.item.length;j++){
 				  this.alphanum[j]= this.$refs.item[j].offsetTop
 			   }	
+			   console.log(this.alphanum);
 				for(var i  in this.alphanum){
 					if(i==this.num){
 					
@@ -70,7 +71,7 @@ export default {
 			   for(var j=0;j<this.$refs.item.length;j++){
 				  this.alpha[this.$refs.item[j].innerHTML]= this.$refs.item[j].offsetTop
 			   }
-				
+				console.log( this.alpha);
 				for(var i  in this.alpha){
 					//console.log(i)
 					if(i==this.word){

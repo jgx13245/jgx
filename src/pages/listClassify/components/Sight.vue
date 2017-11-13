@@ -55,7 +55,7 @@ require('../../../utils/iscroll-probe.js')
 
 <style scoped>
 	#wrapper2{
-		height:11rem;
+		height:9rem;
 		overflow: hidden;
 	}
 	h4{

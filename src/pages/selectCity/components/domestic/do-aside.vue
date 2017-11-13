@@ -36,6 +36,7 @@ export default {
 			const MouseOffsetTop = e.touches[0].clientY;
 			const v = MouseOffsetTop-ulOffsetTop;
 			const num =parseInt(v/20);
+			console.log(num)
 			 this.$emit("changeMove",num);
 			 
 		},
