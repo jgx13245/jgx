@@ -37,9 +37,6 @@ export default {
 				this.todoList.length=4;
 				this.isActive = false;
 				this.hasError = true;
-			}else{
-				this.isActive = true;
-				this.hasError = false;
 			}
 		},
 		
@@ -49,9 +46,6 @@ export default {
 				this.value=1
 				this.isActive = true;
 				this.hasError = false;
-			}else{
-				this.isActive = false;
-				this.hasError = true;
 			}
 			this.todoList.pop(this.value)
 		}
@@ -59,6 +53,10 @@ export default {
 	
 	updated() {
 		this.$emit("changeTour",this.todoList);	
+		if(this.value>1 && this.value<5){
+			this.isActive = true;
+			this.hasError = true;
+		}
 	}
 }
 </script>
@@ -96,17 +94,17 @@ export default {
 		display: block;
 		float: left;
 	}
-	.order-miu1{
-		background: #00afc7;
-	}
 	.order-miu{
 		background: #f0f0f0;
 	}
-	.order-add1{
+	.order-miu1{
 		background: #00afc7;
 	}
 	.order-add{
 		background: #f0f0f0;
+	}
+	.order-add1{
+		background: #00afc7;
 	}
 	.order-number span:nth-child(1){
 		color: #BBBBBB;

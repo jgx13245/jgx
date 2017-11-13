@@ -37,7 +37,6 @@ require('../../../utils/iscroll-probe.js')
 		},	
 		mounted(){
 			this.myScroll =new IScroll('#wrapper2', { probeType:1, mouseWheel: true });
-			
 			this.myScroll.on("scroll",()=>{
 				if(this.myScroll.y>25){
 					this.$store.commit("sightRedInfo");

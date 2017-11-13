@@ -26,8 +26,6 @@ export default {
 			 document.addEventListener("touchmove",this.handleTouchMove,false);
 			 document.addEventListener("touchend",this.handleTouchEnd,false);
 			 
-			 
-
 		},
 		handleTouchMove(e) {
 			
@@ -36,19 +34,14 @@ export default {
 			const MouseOffsetTop = e.touches[0].clientY;
 			const v = MouseOffsetTop-ulOffsetTop;
 			const num =parseInt(v/20);
-			console.log(num)
 			 this.$emit("changeMove",num);
 			 
 		},
 		handleTouchEnd(e) {
-				document.removeEventListener("touchmove", this.handleTouchMove);
-				document.removeEventListener("touchend", this.handleTouchEnd);
+			document.removeEventListener("touchmove", this.handleTouchMove);
+			document.removeEventListener("touchend", this.handleTouchEnd);
 
 		}
-
-
-
-
 
 	}
 

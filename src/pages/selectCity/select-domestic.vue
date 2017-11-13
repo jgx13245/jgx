@@ -28,10 +28,10 @@ export default {
 	},	
 	components: {
 
-                "do-serach": doSerachComponent,
-                "do-list": doListComponent,
-				"do-aside": doAsideComponent,
-				"do-serach-list":doSerachListComponent
+			"do-serach": doSerachComponent,
+			"do-list": doListComponent,
+			"do-aside": doAsideComponent,
+			"do-serach-list":doSerachListComponent
 	},
 	computed: mapState({
 	China(state){
