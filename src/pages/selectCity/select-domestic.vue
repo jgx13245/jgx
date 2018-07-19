@@ -23,7 +23,8 @@ export default {
 			show:false,
 			SearchCity:[],
 			word: "",
-			num:''
+			num:'',
+			ddd:0
 		}
 	},	
 	components: {
@@ -39,8 +40,13 @@ export default {
 		},
 	
 	}),
-	
+	computed: mapState({
+			China(state){
+					return state.selectCity.China
+				}
+		}),
 	methods:{
+		
 		changeWord(word){
 			this.word = word;
 		},
@@ -51,11 +57,7 @@ export default {
 		changeRemove() {
 			this.show=false
 		},
-		computed: mapState({
-			China(state){
-					return state.selectCity.China
-				}
-		}),
+		
 		changeSerach(e) {
 			if( e ){
 				var reg = /^[\u4e00-\u9fa5]+$/;
@@ -99,7 +101,18 @@ export default {
 				
 		}
 		
-	}
+	},
+	// mounted(){
+	// 	// 测验
+		
+	// 	var index=0;
+	// 	setInterval(() => {
+	// 		index++;
+	// 		console.log("dd "+index)
+	// 		this.ddd = index;
+	// 		this.$emit("change",this.ddd)
+	// 	},1000)
+	// }
 	
 }
 

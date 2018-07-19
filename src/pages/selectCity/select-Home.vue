@@ -2,8 +2,8 @@
 	<div>
 		<!--保持和传过来的组件方法名一样-->
  		<select-header @changeTypeList="changeTypeList"></select-header>
-        <domestic v-show="show"></domestic>
-        <foreign v-show="!show"></foreign>
+    	<domestic v-show="show" @change="change"></domestic>
+        <foreign v-show="!show"></foreign> 
  	</div>
 </template>
 
@@ -27,10 +27,14 @@ export default {
 	methods:{
 		changeTypeList:function(e) {
 			this.show=e
-		}
+		},
+			change(e){
+			console.log(e)
+		}	
 	},
 	mounted() {
 		this.$store.dispatch("getCityList");
+	
 	}
 		
 }

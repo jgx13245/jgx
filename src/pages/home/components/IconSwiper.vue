@@ -19,7 +19,9 @@
    			<div class="swiper-img-con">
    			<ul class="second">						
 						<li  v-for="item in iconSwiper1" :key="item.id">
+							<router-link :to="item.link">	
 							<img :src="item.imgUrl" alt="item.iconName" style="opacity: 1;">
+							</router-link>
 							<span>{{item.iconName}}</span>
 						</li>
 			</ul>

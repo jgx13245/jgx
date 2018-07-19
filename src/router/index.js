@@ -8,50 +8,54 @@ import Listgugong from '@/pages/listgogong/List'
 import selectCity from '@/pages/selectCity/select-Home'
 import order from '@/pages/order/Order'
 import OneDayTour from '@/pages/oneDayTour/Tour'
+import shop from '@/pages/shop/shop'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home,
     },
     {
-      path:'/listClassify',
-      name:'listClassify',
-      component:ListClassify
+      path: '/listClassify',
+      name: 'listClassify',
+      component: ListClassify
     },
     {
-      path:'/listHot',
-      name:'listHot',
-      component:List,
-      children:[{
-        path:'a',
-        component:listCity
+      path: '/listHot',
+      name: 'listHot',
+      component: List,
+      children: [{
+        path: 'a',
+        component: listCity
       }]
     },
     {
-      path:'/listgogong',
-      name:'List',
-      component:Listgugong
+      path: '/listgogong',
+      name: 'List',
+      component: Listgugong
     },
     {
-      path:'/selectCity',
-      name:'selectCity',
-      component:selectCity
-    },{
-      path:'/order',
-      name:'Order',
-      component:order
+      path: '/selectCity',
+      name: 'selectCity',
+      component: selectCity
+    }, {
+      path: '/order',
+      name: 'Order',
+      component: order
 
-    },{
-      
-        path:'/oneDayTour',
-        name:'Tour',
-        component:OneDayTour
+    }, {
+
+      path: '/oneDayTour',
+      name: 'Tour',
+      component: OneDayTour
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: shop
     }
   ]
 })
-

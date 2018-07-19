@@ -40,6 +40,11 @@ export default {
 		},
 	
 	}),
+	computed: mapState({
+			Foreign(state){
+					return state.selectCity.Foreign
+				}
+		}),
 	
 	methods:{
 		changeWord(word){
@@ -53,11 +58,7 @@ export default {
 		changeRemove() {
 			this.show=false
 		},
-		computed: mapState({
-			Foreign(state){
-					return state.selectCity.Foreign
-				}
-		}),
+		
 		changeSerach(e) {
 			if( e ){
 				var reg = /^[\u4e00-\u9fa5]+$/;
